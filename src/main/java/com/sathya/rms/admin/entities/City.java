@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class City {
@@ -12,6 +14,10 @@ public class City {
 	private Integer id;
 	private String ctyId;
 	private String ctyName;
+	
+	@ManyToOne
+	@JoinColumn(name="st_id")
+	private State state;
 
 	public Integer getId() {
 		return id;
@@ -35,6 +41,14 @@ public class City {
 
 	public void setCtyName(String ctyName) {
 		this.ctyName = ctyName;
+	}
+
+	public State getState() {
+		return state;
+	}
+
+	public void setState(State state) {
+		this.state = state;
 	}
 
 }

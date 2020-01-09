@@ -4,6 +4,7 @@ package com.sathya.rms.admin.controllers;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +18,7 @@ import com.sathya.rms.admin.services.StateService;
 
 @RestController
 @RequestMapping(path="/state")
+@CrossOrigin
 public class StateController {
 	
 	@SuppressWarnings("unused")
